@@ -16,3 +16,5 @@ router.get("/api/zip-codes/code_postal", (req, res) => {
     res.status(404).json({ message: "Code postal non trouvé" });
   }
 });
+
+module.exports = router;
