@@ -1,10 +1,8 @@
 // Importation express
-
 const express = require("express");
 const router = express.Router();
 
 // Récupération données des villes
-
 const citiesData = require("../test-technique/resources/laposte_hexasmal.json");
 
 router.get("/villes", (req, res) => {
@@ -13,4 +11,3 @@ router.get("/villes", (req, res) => {
 });
 
 module.exports = router;
-

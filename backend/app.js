@@ -1,16 +1,18 @@
 const express = require("express");
-const app = express();
+const router = express.Router();
 
-// Importqtion des fichiers
-const citiesRouter = require("./routes/cities.routes");
-const zipCodesRouter = require("./routes/zipCodes.routes");
-const deleteCodePostalRouter = require("./routes/deleteCodePostal.routes");
-const updateCodePostalRouter = require("./routes/updateCodePostal.routes");
+// Importation des fichiers
+const citiesRouter = require("./routes/city.routes");
+const zipCodesRouter = require("./routes/zip.code");
+const deleteCodePostalRouter = require("./routes/zip.delete");
+const updateCodePostalRouter = require("./routes/zip.search.code");
 
-app.use("/api/cities", citiesRouter);
-app.use("/api/zip-codes", zipCodesRouter);
-app.use("/api/delete-zip-code", deleteCodePostalRouter);
-app.use("/api/update-zip-code", updateCodePostalRouter);
+router.get("/api/cities", citiesRouter);
+router.get("/api/zip-codes", zipCodesRouter);
+router.delete("/api/delete-zip-code", deleteCodePostalRouter);
+router.put("/api/update-zip-code", updateCodePostalRouter);
+
+module.exports = router;
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

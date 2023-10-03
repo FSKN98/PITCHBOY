@@ -5,8 +5,8 @@ function HomePage() {
   const [latestMovies, setLatestMovies] = useState([]);
 
   useEffect(() => {
-    const apiKey = "ad2c28e0345278f3c8b002efddadf28f";
-    const apiUrl = `https://api.themoviedb.org/3/movie/latest?api_key=${apiKey}`;
+    const apiKey = "54554e95bb46735def4b573f24900c6c";
+    const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`;
 
     axios
       .get(apiUrl)
