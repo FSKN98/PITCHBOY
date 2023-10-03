@@ -1,0 +1,39 @@
+.title {
+  display: flex;
+  justify-content: space-around;
+  font-size: 32px;
+}
+
+.movieContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.movieContent {
+  text-align: center;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+}
+
+.imageMovie {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.titleMovie {
+  font-family: "Arial", sans-serif;
+  font-size: 1.2rem;
+  color: #333;
+}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "../component/HomePage.css";
 
 function HomePage() {
   const [latestMovies, setLatestMovies] = useState([]);
@@ -23,16 +24,22 @@ function HomePage() {
 
   return (
     <div>
+
+  <h3 className="title">Les films</h3>
+    <div className="movieContainer">
+
       {latestMovies.map((movie) => (
-        <div key={movie.id}>
+        <div key={movie.id} className="movieContent">
           <img
+            className="imageMovie"
             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
             alt={movie.title}
           />
-          <h3>{movie.title}</h3>
+          <h3 className="titleMovie">{movie.title}</h3>
         </div>
       ))}
-    </div>
+      </div>
+        </div>
   );
 }
 
