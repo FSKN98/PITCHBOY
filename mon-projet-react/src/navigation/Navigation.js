@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React from "react";
 import HomePage from "../component/HomePage";
 import MovieDetail from "../component/MovieDetailPage";
-import MovieList from "../component/MovieList";
 import MovieSuggestion from "../component/MovieSuggestions";
 
 export default function Navigation() {
@@ -13,7 +12,6 @@ export default function Navigation() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/movie-detail" element={<MovieDetail />} />
-            <Route path="/movie-list" element={<MovieList />} />
             <Route path="/movie-suggestion" element={<MovieSuggestion />} />
           </Routes>
         </main>
